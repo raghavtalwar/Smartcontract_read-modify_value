@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./index.js"> </script>
+  </head>
+  <body>
+    <div class="container">   
+<!--bootstrap loaded from link rel and it always start with container
+  open rows and bootstrap has a grid system which allows us to align content in form of
+  grids -> column
+  then form will call the set data function of smart contract
+  input text
+  button -> onclick and send it to set data function and we will update the value 
+  input is number as smart contract is expecting a number
+  Bootstrap Documentation
+-->
+      <div class="row">
+
+        <div class="col-sm-12">
+          <h1>Simple storage</h1>
+
+          <form id="setData">
+            <div class="form-group">
+              <label for="setDataInput">Set data (number)</label>
+              <input id="setDataInput" type="number" class="form-control"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <div>Data: <span id="data"> </span></div>
+<!--
+  We will use this span to render the current value of our data 
+  data variable of the smart contract
+  Form is calling set data and changing data 
+  and 
+  Span data is just reading the value by calling the data function of smart contract   
+-->
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
